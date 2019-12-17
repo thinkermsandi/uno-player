@@ -1,0 +1,153 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Uno Player</string>
+
+    <string name="title_activity_main">Uno Player</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="nav_header_title">Uno Player</string>
+    <string name="nav_header_subtitle"></string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="nav_menu_music">Music</string>
+    <string name="nav_menu_video">Video</string>
+    <string name="nav_menu_playlist">Playlist</string>
+    <string name="nav_menu_settings">Settings</string>
+    <string name="nav_menu_about_app">About</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <string name="empty_text_albums">No albums</string>
+    <string name="empty_text_album_detail">Empty</string>
+    <string name="empty_text_artists">No artists</string>
+    <string name="empty_text_artist_detail">Empty</string>
+    <string name="empty_text_playlists">No playlists</string>
+    <string name="empty_text_playlist_detail">Empty playlist</string>
+    <string name="empty_text_songs">No songs</string>
+    <string name="empty_text_song_detail">Empty</string>
+    <string name="empty_text_videos">No videos</string>
+    <string name="empty_text_video_detail">Empty</string>
+
+    <string name="songs">Songs</string>
+    <string name="songs_count"><xliff:g id="count">%d</xliff:g> songs</string>
+    <string name="song_count"><xliff:g id="count">%d</xliff:g> song</string>
+    <string name="song_play">Play</string>
+    <string name="song_add_to_playlist">Add to playlist</string>
+    <string name="song_go_to_album">Go to album</string>
+    <string name="song_go_to_artist">Go to artistName</string>
+    <string name="song_add_to_queue">Add to queue</string>
+    <string name="song_play_next">Play next</string>
+    <string name="song_share">Share</string>
+    <string name="song_delete_from_device">Delete from device</string>
+    <string name="song_remove_from_queue">Remove from queue</string>
+
+    <string name="albums">Albums</string>
+    <string name="albums_count"><xliff:g id="count">%d</xliff:g> albums</string>
+    <string name="album_count"><xliff:g id="count">%d</xliff:g> album</string>
+
+    <string name="artists">Artists</string>
+    <string name="artist_count"><xliff:g id="count">%d</xliff:g> artistName</string>
+    <string name="artists_count"><xliff:g id="count">%d</xliff:g> artists</string>
+
+    <string name="library">Library</string>
+
+    <string name="playlists">Playlists</string>
+    <string name="playlist_new">New playlist</string>
+    <string name="playlist_no_song_added">No song was added to playlist.</string>
+    <string name="playlist_song_added"><xliff:g example="1" id="number">%d</xliff:g> song added to playlist.</string>
+    <string name="playlist_songs_added"><xliff:g example="1" id="number">%d</xliff:g> songs added to playlist.</string>
+
+    <string name="queue_playing">Playing Queue</string>
+    <string name="queue_no_song_added">No song was added to the queue.</string>
+    <string name="queue_song_added"><xliff:g example="1" id="number">%d</xliff:g> song added to the queue.</string>
+    <string name="queue_songs_added"><xliff:g example="1" id="number">%d</xliff:g> songs added to the queue.</string>
+
+    <string name="now_playing">Now Playing</string>
+    <string name="settings">Settings</string>
+    <string name="about">About</string>
+    <string name="help_and_feedback">Help and Feedback</string>
+    <string name="search">Search</string>
+
+    <string name="search_library">Search Library</string>
+
+    <string name="durationformatshort" translatable="false"><xliff:g id="format">%2$d:%3$02d</xliff:g></string>
+    <string name="durationformatlong" translatable="false"><xliff:g id="format">%1$d:%2$02d:%3$02d</xliff:g></string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string-array name="list_preference_entries">
+        <item>Entry 1</item>
+        <item>Entry 2</item>
+        <item>Entry 3</item>
+    </string-array>
+
+    <string-array name="list_preference_entry_values">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <string-array name="multi_select_list_preference_default_value" />
+
+    <string name="pref_title_system_sync_settings">System sync settings</string>
+
+    <!-- Example settings for Notifications -->
+    <string name="pref_header_notifications">Notifications</string>
+
+    <string name="pref_title_new_message_notifications">New message notifications</string>
+
+    <string name="pref_title_ringtone">Ringtone</string>
+    <string name="pref_ringtone_silent">Silent</string>
+
+    <string name="pref_title_vibrate">Vibrate</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

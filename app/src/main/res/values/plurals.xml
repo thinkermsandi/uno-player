@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <plurals name="SongsAddedToQueue">
+        <item quantity="zero">@string/queue_no_song_added</item>
+        <item quantity="one">@string/queue_song_added</item>
+        <item quantity="other">@string/queue_songs_added</item>
+    </plurals>
+
+    <plurals name="SongsAddedToPlaylist">
+        <item quantity="zero">@string/playlist_no_song_added</item>
+        <item quantity="one">@string/playlist_song_added</item>
+        <item quantity="other">@string/playlist_songs_added</item>
+    </plurals>
+
+</resources>

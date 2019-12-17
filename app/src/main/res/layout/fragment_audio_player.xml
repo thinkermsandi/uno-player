@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
+        app:layout_constraintBottom_toTopOf="@id/view_pager"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:layout_gravity="center_vertical"
+            android:transitionName="toolbar"
+            app:titleMarginStart="16dp"
+            app:titleMarginEnd="16dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:layout_collapseMode="pin"
+            app:layout_scrollFlags="scroll|enterAlways"
+            tools:ignore="UnusedAttribute">
+
+            <ImageView
+                android:id="@+id/audio_player_exit"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_gravity="start|center_vertical"
+                android:src="@drawable/ic_chevron_down_white_24dp"
+                android:tint="@color/text_secondary"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/audio_player_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fadingEdge="horizontal"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:scrollHorizontally="true"
+                    style="@style/TextAppearance.MaterialComponents.Body1"
+                    tools:text="Title kda euebjddjs fjsjseie dsoffns opwondsd wiasas akskas" />
+
+                <TextView
+                    android:id="@+id/audio_player_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:scrollHorizontally="true"
+                    style="@style/TextAppearance.MaterialComponents.Caption"
+                    tools:text="Unknown"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/audio_player_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_gravity="end|center_vertical"
+                android:src="@drawable/ic_overflow_white_24dp"
+                android:tint="@color/text_secondary"
+                tools:ignore="ContentDescription" />
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/audio_player_image_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="171dp"
+        android:padding="16dp"
+        android:layout_below="@id/app_bar">
+        
+        <android.support.design.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="8dp"
+            app:cardUseCompatPadding="true">
+
+            <ImageView
+                android:id="@+id/audio_player_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_music_note_white_24dp"
+                android:tint="@color/gray"
+                android:background="@color/gray_dark"
+                android:clickable="false"
+                tools:ignore="ContentDescription" />
+
+        </android.support.design.card.MaterialCardView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/seekBarContainer"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:padding="12dp"
+        android:layout_above="@+id/mainControllerContainer">
+
+        <TextView
+            android:id="@+id/audio_player_current_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center_vertical|start|end"
+            android:paddingLeft="8dp"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="?android:textColorSecondary"
+            android:textSize="12sp"
+            android:text="0:00"
+            tools:ignore="RtlHardcoded,RtlSymmetry"/>
+
+        <TextView
+            android:id="@+id/audio_player_total_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center_vertical|right|end"
+            android:paddingRight="8dp"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textColor="?android:textColorSecondary"
+            android:textSize="12sp"
+            android:text="0:00"
+            tools:ignore="RtlHardcoded,RtlSymmetry" />
+
+        <SeekBar
+            android:id="@+id/audio_player_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:padding="10dp"
+            android:maxHeight="3dp"
+            android:layout_toStartOf="@+id/audio_player_total_time"
+            android:layout_toEndOf="@+id/audio_player_current_time"
+            android:thumb="@drawable/progress_bar_thumb"
+            android:thumbOffset="0dp"
+            android:splitTrack="false"
+            android:progressDrawable="@drawable/color_progress_seek"
+            tools:ignore="RtlHardcoded"
+            tools:progress="20"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mainControllerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/audio_player_repeat"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="10dp"
+            android:padding="3dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_repeat"
+            android:tint="@color/gray_dark"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/audio_player_previous"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="85dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_previous"
+            android:tint="@color/gray_dark"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/audio_player_controller"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:tint="@color/colorAccent"
+            tools:ignore="ContentDescription" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:visibility="gone"
+            android:id="@+id/audio_player_buffer"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="10dp"
+            android:layout_centerInParent="true"
+            app:indicatorColor="@color/colorAccent"
+            app:indicatorName="BallSpinFadeLoaderIndicator" />
+
+        <ImageView
+            android:id="@+id/audio_player_next"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="85dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_next"
+            android:tint="@color/gray_dark"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/audio_player_shuffle"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="10dp"
+            android:padding="3dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_shuffle"
+            android:tint="@color/gray_dark"
+            tools:ignore="ContentDescription" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

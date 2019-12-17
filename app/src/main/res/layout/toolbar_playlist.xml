@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:transitionName="toolbar"
+    app:titleMarginStart="16dp"
+    app:titleMarginEnd="16dp"
+    app:contentInsetStart="0dp"
+    app:contentInsetStartWithNavigation="0dp"
+    app:layout_collapseMode="pin"
+    app:layout_scrollFlags="scroll|enterAlways"
+    tools:ignore="UnusedAttribute">
+
+    <TextView
+        android:id="@+id/toolbar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.0125"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textColor="@color/text_primary"
+        android:text="Playlists" />
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/toolbar_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_gravity="end|center_vertical"
+        android:src="@drawable/ic_overflow_white_24dp"
+        android:tint="@color/text_secondary"/>
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/toolbar_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_gravity="end|center_vertical"
+        android:src="@drawable/ic_search_white_24dp"
+        android:tint="@color/text_secondary"/>
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/toolbar_add_playlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_gravity="end|center_vertical"
+        android:src="@drawable/ic_add_white_24dp"
+        android:tint="@color/text_secondary"/>
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/toolbar_now_playing"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_gravity="end|center_vertical"
+        android:src="@drawable/ic_uno_player_logo"
+        android:tint="@color/colorAccent"/>
+
+</android.support.v7.widget.Toolbar>
